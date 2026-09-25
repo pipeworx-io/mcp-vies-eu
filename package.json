@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-vies-eu",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "EU VIES VAT-number validation MCP (European Commission).",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-vies-eu": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "vies-eu"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-vies-eu"
+    "url": "git+https://github.com/pipeworx-io/mcp-vies-eu.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-2292b77944413de079eddcb1961260c1dca88b46ace9a5fbd1bf3217dd01c18a",
+    "sourceCommit": "b0fb3c31386cf0256dcf1e2f1b3440435a87ec35"
   }
 }
