@@ -1,0 +1,31 @@
+[
+  {
+    "name": "check_vat",
+    "description": "Validate an EU VAT number against VIES. Returns whether the number is a valid/registered EU VAT registration, plus the registered name and address when the member state publishes them (many states return \"---\" or empty even for valid numbers). A false result means not registered/invalid. If the national service is temporarily down, userError is MS_UNAVAILABLE/MS_MAX_CONCURRENT_REQ etc. — treat that as \"could not check\", not \"invalid\".",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "countryCode": {
+          "type": "string",
+          "description": "2-letter EU member-state code = the VAT prefix, e.g. \"DE\", \"FR\", \"IT\". Greece is \"EL\" (not \"GR\")."
+        },
+        "vatNumber": {
+          "type": "string",
+          "description": "The VAT number WITHOUT the country prefix, e.g. \"811569869\". If you include the prefix (e.g. \"DE811569869\") it is stripped automatically."
+        }
+      },
+      "required": [
+        "countryCode",
+        "vatNumber"
+      ]
+    }
+  },
+  {
+    "name": "service_status",
+    "description": "List all EU member states and whether each national VAT-checking service is currently Available or Unavailable, plus overall VIES (VoW) availability. Use this before/after a failed check_vat to tell a temporary national outage apart from a genuinely invalid VAT number.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  }
+]
