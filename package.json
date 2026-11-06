@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-vies-eu",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "EU VIES VAT-number validation MCP (European Commission).",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "vies-eu",
     "gatewaySlug": "vies-eu",
-    "sourceHash": "v1-b0391d081a62850f0877bf246d83dfa75af6e1118a8a70cdd50def073d31d66f",
-    "sourceCommit": "98853f34516646cb7c4c1460f09249b262c0269e"
+    "sourceHash": "v1-30cb743846e323fe94d99158809492b382289ab72eeb7dd5a83d879b0c0f0f5c",
+    "sourceCommit": "ca52e7ed1e1ccad897c2da1b0fa105edc0bc3b2e"
   }
 }
